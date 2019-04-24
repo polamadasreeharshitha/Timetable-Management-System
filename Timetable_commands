@@ -1,0 +1,39 @@
+cd setuptools-40.6.2
+sudo python3 setup.py install
+
+cd pip-master
+sudo python3 setup.py install
+
+cd django-master
+sudo python3 setup.py install
+
+cd pytz-2018.7
+sudo python3 setup.py install
+
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo apt-get install libmysqlclient-dev python3-dev
+pip3 install --user mysqlclient-1.3.13.tar.gz
+--------------------------------------------------------------------------------------
+sudo apt install virtualenv
+virtualenv myenv
+source myenv /bin/activate
+sudo apt-get install python3-pip python3-dev
+sudo pip3 install Django==2.1.2
+sudo apt-get install mysql-server(incase mysql is not there)
+sudo apt-get install libmysqlclient-dev python3-dev
+pip3 install --user mysqlclient-1.3.13.tar.gz
+
+--------------------------------------------------------------------------------------
+mysqldump time > time.sql
+mysql -u root -p time < time.sql
+--------------------------------------------------------------------------------------
+error:unable to locate package pip
+resolve: sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python3-pip
+--------------------------------------------------------------------------------------
+error:using pip 8.1 version
+resolve: sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+sudo pip3 install Django==2.1.2
